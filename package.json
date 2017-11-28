@@ -1,0 +1,22 @@
+{
+  "name": "zkt-fetch",
+  "version": "1.0.1",
+  "description": "node-fetch wrapper to provide better error information",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zhiketong/zkt-fetch.git"
+  },
+  "author": "Chunlong(jszen.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Zhiketong/zkt-fetch/issues"
+  },
+  "homepage": "https://github.com/Zhiketong/zkt-fetch#readme",
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  }
+}
