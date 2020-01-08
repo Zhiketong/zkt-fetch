@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+const { inspect } = require('util');
 
 module.exports = function(url, options) {
 	if (!options) options = {};
@@ -46,7 +47,7 @@ module.exports = function(url, options) {
 	}).catch(err => {
 		err = err || new Error();
 		if (!err.url) err.url = url;
-		if (!err.options) err.options = options;
+		if (!err.options) err.options = {...options, agent: options.agent ? inspect(options.agent, { depth: 1 }) : null};
 		if (!err.message) err.message = 'Unkown fetch error caught by zkt-fetch wrapper';
 		if (!err.type) err.type = 'unkown-fetch-error';
 		err.timeCost = (Date.now() - t1) + 'ms';
